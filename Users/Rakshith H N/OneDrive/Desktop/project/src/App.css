@@ -1,0 +1,16 @@
+.navbar {
+  background: linear-gradient(to right, 
+    rgba(177, 57, 251, 0.7) 0%,   
+    rgba(0, 3, 49, 0.7) 21%,  
+    rgba(0, 9, 151, 0.7) 38%,  
+    rgba(89, 30, 150, 0.7) 56%,  
+    rgba(0, 3, 49, 0.7) 78%,  
+    rgba(52, 178, 74, 0.7) 95%, 
+    rgba(138, 246, 253, 0.7) 100%  
+  ), url('/logo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px 10px 5px 10px;
+  height: 60px;
+}
