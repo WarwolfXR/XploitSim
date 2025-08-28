@@ -18,7 +18,7 @@ export default function Navbar() {
             <li><a href="/">Home</a></li>
             <li><a href="https://owasp.org/Top10/" target="_blank" rel="noopener noreferrer"> Study Material</a></li>
             <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
           </ul>
     </div>
 
