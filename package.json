@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@tailwindcss/line-clamp": "^0.4.4",
+=======
+>>>>>>> 37f4dc8663a38cba9652328acf73df8f84946860
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.7.0",
     "@testing-library/react": "^16.3.0",
@@ -12,7 +15,11 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
+<<<<<<< HEAD
     "react-router-dom": "^7.9.3",
+=======
+    "react-router-dom": "^7.8.2",
+>>>>>>> 37f4dc8663a38cba9652328acf73df8f84946860
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
