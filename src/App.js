@@ -1,15 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-=======
->>>>>>> 37f4dc8663a38cba9652328acf73df8f84946860
 import './App.css';
 import Navbar from './components/Navbar';
 import Understand from './components/Understand';
 import Securesection from './components/Securesection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-<<<<<<< HEAD
 import OWASPTop10 from './components/OWASPTop10';
 import BrokenAccessControl from './components/BrokenAccessControl';
 import CryptographicFailures from './components/CryptographicFailures';
@@ -27,17 +23,6 @@ function HomePage() {
     <>
       <div className="hero-container">
         <img src="herophoto.jpg" alt="Hero" />
-=======
-
-function App() {
-  return (
-    <>
-      <Navbar />
-
-      <div className="hero-container">
-        <img src="herophoto.jpg" alt="Hero" />
-
->>>>>>> 37f4dc8663a38cba9652328acf73df8f84946860
         <div className="hero-text">
           <h1>Discover the OWASP Top 10 Vulnerabilities</h1>
           <h4>
@@ -48,16 +33,15 @@ function App() {
           </h4>
         </div>
       </div>
-<<<<<<< HEAD
-      
+
       <div id="owasp">
         <OWASPTop10 />
       </div>
-      
+
       <div id="secure">
         <Securesection />
       </div>
-      
+
       <div id="understand">
         <Understand />
       </div>
@@ -65,22 +49,10 @@ function App() {
       <div id="contact">
         <Contact />
       </div>
-=======
-
-      <Securesection />
-      <Understand />
-
-      
-      <div id="contact">
-        <Contact />
-      </div>
-      <Footer />
->>>>>>> 37f4dc8663a38cba9652328acf73df8f84946860
     </>
   );
 }
 
-<<<<<<< HEAD
 function App() {
   return (
     <Router>
@@ -108,6 +80,3 @@ function App() {
 }
 
 export default App;
-=======
-export default App;
->>>>>>> 37f4dc8663a38cba9652328acf73df8f84946860
