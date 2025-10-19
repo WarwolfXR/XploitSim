@@ -598,7 +598,10 @@
   line-height: 1.5;
   overflow-x: auto;
 }
-
+.btn.btn-outline-warning{
+  margin-left: 700px;
+  margin-top: 50px;
+}
 /* Resources Section */
 .bac-resources {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);

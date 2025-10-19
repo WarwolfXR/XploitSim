@@ -1,96 +1,97 @@
 import React from 'react';
-import './VulnerabilityPage.css';
+import './BrokenAccessControl.css';
 
-const AuthenticationFailures = () => {
+const BrokenAccessControl = () => {
   return (
-    <div className="vulnerability-page">
-      <section className="vp-hero">
-        <div className="vp-hero-content">
-          <div className="vp-hero-text">
-            <div className="vp-badge">A07:2021</div>
-            <h1 className="vp-title">Identification and Authentication Failures</h1>
-            <p className="vp-subtitle">
-              Broken authentication mechanisms that allow credential stuffing, brute force attacks, 
-              session hijacking, and other authentication bypass techniques.
+    <div className="broken-access-page">
+      {/* Hero Section */}
+      <section className="bac-hero">
+        <div className="bac-hero-content">
+          <div className="bac-hero-text">
+            <div className="bac-badge">A01:2021</div>
+            <h1 className="bac-title">Broken Access Control</h1>
+            <p className="bac-subtitle">
+              The #1 most critical web application security risk. Access control enforces policy so users cannot act outside of their intended permissions.
             </p>
-            <div className="vp-stats">
-              <div className="vp-stat">
-                <span className="vp-stat-number">#7</span>
-                <span className="vp-stat-label">OWASP Rank</span>
+            <div className="bac-stats">
+              <div className="stat">
+                <span className="stat-number">94%</span>
+                <span className="stat-label">of applications</span>
               </div>
-              <div className="vp-stat">
-                <span className="vp-stat-number">Critical</span>
-                <span className="vp-stat-label">Impact</span>
+              <div className="stat">
+                <span className="stat-number">#1</span>
+                <span className="stat-label">OWASP Rank</span>
               </div>
-              <div className="vp-stat">
-                <span className="vp-stat-number">90%</span>
-                <span className="vp-stat-label">Apps Affected</span>
+              <div className="stat">
+                <span className="stat-number">High</span>
+                <span className="stat-label">Impact</span>
               </div>
             </div>
           </div>
-          <div className="vp-hero-visual">
-            <div className="vp-security-icon">
-              <div className="vp-icon">👤</div>
-              <div className="vp-icon-text">Authentication</div>
+          <div className="bac-hero-visual">
+            <div className="security-shield">
+              <div className="shield-icon">🛡️</div>
+              <div className="shield-text">Access Control</div>
             </div>
           </div>
         </div>
+        <div className="bac-scroll-indicator">
+          <span>Scroll to explore</span>
+          <div className="scroll-arrow"></div>
+        </div>
       </section>
 
-      <section className="vp-section vp-overview">
-        <div className="vp-container">
-          <h2>Authentication Security Gaps</h2>
-          <div className="vp-overview-grid">
-            <div className="vp-overview-content">
+      {/* Overview Section */}
+      <section className="bac-section bac-overview">
+        <div className="bac-container">
+          <h2>What is Broken Access Control?</h2>
+          <div className="overview-grid">
+            <div className="overview-content">
               <p>
-                Authentication failures occur when application functions related to authentication and session management 
-                are implemented incorrectly, allowing attackers to compromise passwords, keys, or session tokens, 
-                or to exploit other implementation flaws to assume other users' identities temporarily or permanently.
+                Access control, sometimes called authorization, is how a web application grants access to content and functions to some users and not others. These checks are performed after authentication and govern what authenticated users are allowed to do.
               </p>
               <p>
-                Confirmation of the user's identity, authentication, and session management is critical to protect 
-                against authentication-related attacks. There may be authentication weaknesses if the application permits 
-                automated attacks, permits brute force, uses weak credentials, has weak password recovery, or uses plain text passwords.
+                Broken Access Control vulnerabilities exist when an application does not properly enforce these restrictions, allowing attackers to bypass authorization and perform privileged actions.
               </p>
-              <div className="vp-impact-box">
-                <h4>🚨 Authentication Attack Impacts</h4>
+              <div className="impact-box">
+                <h4>🚨 Business Impact</h4>
                 <ul>
-                  <li>Complete account takeover and identity theft</li>
-                  <li>Unauthorized access to sensitive data and functionality</li>
-                  <li>Financial fraud through compromised user accounts</li>
-                  <li>Privilege escalation to administrative functions</li>
-                  <li>Reputation damage and loss of customer trust</li>
+                  <li>Unauthorized access to sensitive data</li>
+                  <li>User account takeover</li>
+                  <li>Privilege escalation attacks</li>
+                  <li>Data breach and compliance violations</li>
+                  <li>Financial fraud and reputation damage</li>
                 </ul>
               </div>
             </div>
-            <div className="vp-overview-visual">
-              <div className="vp-data-flow">
-                <div className="vp-flow-step">
-                  <div className="vp-step-number">1</div>
-                  <div className="vp-step-content">
-                    <strong>Authentication Request</strong>
-                    <span>User attempts to authenticate</span>
+            <div className="overview-visual">
+              <div className="access-flow">
+                <div className="flow-step">
+                  <div className="step-number">1</div>
+                  <div className="step-content">
+                    <strong>User Authentication</strong>
+                    <span>User logs into the system</span>
                   </div>
                 </div>
-                <div className="vp-flow-step">
-                  <div className="vp-step-number">2</div>
-                  <div className="vp-step-content">
-                    <strong>Weak Controls</strong>
-                    <span>Inadequate authentication mechanisms</span>
+                <div className="flow-step">
+                  <div className="step-number">2</div>
+                  <div className="step-content">
+                    <strong>Access Check</strong>
+                    <span>System verifies permissions</span>
                   </div>
                 </div>
-                <div className="vp-flow-step vp-vulnerable">
-                  <div className="vp-step-number">3</div>
-                  <div className="vp-step-content">
-                    <strong>Authentication Bypass</strong>
-                    <span>Attacker circumvents authentication</span>
+                <div className="flow-step vulnerable">
+                  <div className="step-number">3</div>
+                  <div className="step-content">
+                    <strong>Vulnerability Point</strong>
+                    <span>Missing or broken access control</span>
                   </div>
                 </div>
-                <div className="vp-flow-step">
-                  <div className="vp-step-number">4</div>
-                  <div className="vp-step-content">
-                    <strong>Account Compromise</strong>
-                    <span>Attacker gains unauthorized access</span>
+                <div className="flow-step">
+                  <div className="step-number">4</div>
+                  <div className="step-content">
+                    <strong>Unauthorized Access</strong>
+                    <span>Attacker bypasses restrictions</span>
                   </div>
                 </div>
               </div>
@@ -99,56 +100,41 @@ const AuthenticationFailures = () => {
         </div>
       </section>
 
-      <section className="vp-section vp-vectors">
-        <div className="vp-container">
-          <h2>Common Authentication Vulnerabilities</h2>
-          <div className="vp-vectors-grid">
-            <div className="vp-vector-card vp-critical">
-              <div className="vp-vector-icon">🔓</div>
-              <h3>Credential Stuffing</h3>
-              <p>Using lists of known username/password pairs from previous breaches to gain unauthorized access.</p>
-              <div className="vp-vector-example">
-                <code>Automated login attempts with breached credentials</code>
+      {/* Attack Vectors Section */}
+      <section className="bac-section bac-vectors">
+        <div className="bac-container">
+          <h2>Common Attack Vectors</h2>
+          <div className="vectors-grid">
+            <div className="vector-card critical">
+              <div className="vector-icon">🎯</div>
+              <h3>IDOR Attacks</h3>
+              <p>Insecure Direct Object References occur when an application uses user-supplied input to access objects directly.</p>
+              <div className="vector-example">
+                <code>GET /api/users/123 → GET /api/users/124</code>
               </div>
             </div>
-            <div className="vp-vector-card vp-high">
-              <div className="vp-vector-icon">💥</div>
-              <h3>Brute Force Attacks</h3>
-              <p>Systematically trying all possible password combinations to find the correct one.</p>
-              <div className="vp-vector-example">
-                <code>Unlimited login attempts without rate limiting</code>
+            <div className="vector-card high">
+              <div className="vector-icon">⬆️</div>
+              <h3>Privilege Escalation</h3>
+              <p>Vertical: Regular user gains admin privileges. Horizontal: User accesses another user's data.</p>
+              <div className="vector-example">
+                <code>User accesses /admin/panel without admin role</code>
               </div>
             </div>
-            <div className="vp-vector-card vp-high">
-              <div className="vp-vector-icon">🍪</div>
-              <h3>Session Hijacking</h3>
-              <p>Stealing or predicting session tokens to impersonate authenticated users.</p>
-              <div className="vp-vector-example">
-                <code>Predictable session IDs or tokens exposed in URLs</code>
+            <div className="vector-card medium">
+              <div className="vector-icon">📊</div>
+              <h3>Metadata Manipulation</h3>
+              <p>Modifying JWT tokens, cookies, or hidden fields to elevate privileges or impersonate users.</p>
+              <div className="vector-example">
+                <code>{"{role: 'user'} → {role: 'admin'}"}</code>
               </div>
             </div>
-            <div className="vp-vector-card vp-medium">
-              <div className="vp-vector-icon">🔄</div>
-              <h3>Weak Password Recovery</h3>
-              <p>Insecure password reset mechanisms that can be exploited to take over accounts.</p>
-              <div className="vp-vector-example">
-                <code>Security questions with publicly available answers</code>
-              </div>
-            </div>
-            <div className="vp-vector-card vp-critical">
-              <div className="vp-vector-icon">🚫</div>
-              <h3>Authentication Bypass</h3>
-              <p>Flaws that allow accessing protected resources without proper authentication.</p>
-              <div className="vp-vector-example">
-                <code>URL parameter manipulation to bypass login</code>
-              </div>
-            </div>
-            <div className="vp-vector-card vp-high">
-              <div className="vp-vector-icon">📱</div>
-              <h3>Insecure Multi-Factor Auth</h3>
-              <p>Weak implementations of 2FA/MFA that can be bypassed or have implementation flaws.</p>
-              <div className="vp-vector-example">
-                <code>SMS-based 2FA vulnerable to SIM swapping</code>
+            <div className="vector-card high">
+              <div className="vector-icon">🔗</div>
+              <h3>Forceful Browsing</h3>
+              <p>Accessing URLs directly that shouldn't be accessible without proper authorization checks.</p>
+              <div className="vector-example">
+                <code>Direct access to /api/internal/data</code>
               </div>
             </div>
           </div>
@@ -156,40 +142,40 @@ const AuthenticationFailures = () => {
       </section>
 
       {/* Real World Examples */}
-      <section className="vp-section vp-examples">
-        <div className="vp-container">
-          <h2>Real-World Authentication Breaches</h2>
-          <div className="vp-examples-timeline">
-            <div className="vp-timeline-item">
-              <div className="vp-timeline-year">2020</div>
-              <div className="vp-timeline-content">
-                <h4>Twitter Celebrity Account Hack</h4>
-                <p>Social engineering attack combined with authentication bypass allowed attackers to compromise 130 high-profile Twitter accounts including Elon Musk and Barack Obama.</p>
-                <div className="vp-breach-impact">
-                  <span className="vp-impact-badge">130 Accounts</span>
-                  <span className="vp-impact-badge">Bitcoin Scam</span>
+      <section className="bac-section bac-examples">
+        <div className="bac-container">
+          <h2>Real-World Breach Examples</h2>
+          <div className="examples-timeline">
+            <div className="timeline-item">
+              <div className="timeline-year">2022</div>
+              <div className="timeline-content">
+                <h4>Social Media Platform</h4>
+                <p>Attackers exploited IDOR vulnerabilities to access private messages and photos of 5.4 million users by incrementing user IDs in API requests.</p>
+                <div className="breach-impact">
+                  <span className="impact-badge">5.4M Users</span>
+                  <span className="impact-badge">$265M Fine</span>
                 </div>
               </div>
             </div>
-            <div className="vp-timeline-item">
-              <div className="vp-timeline-year">2019</div>
-              <div className="vp-timeline-content">
-                <h4>Capital One Credential Stuffing</h4>
-                <p>Attackers used credential stuffing with previously breached passwords to access 100 million customer accounts through a misconfigured firewall.</p>
-                <div className="vp-breach-impact">
-                  <span className="vp-impact-badge">100M Accounts</span>
-                  <span className="vp-impact-badge">$190M Fine</span>
+            <div className="timeline-item">
+              <div className="timeline-year">2021</div>
+              <div className="timeline-content">
+                <h4>Healthcare Portal</h4>
+                <p>Missing access controls allowed patients to view other patients' medical records by modifying URL parameters in the healthcare portal.</p>
+                <div className="breach-impact">
+                  <span className="impact-badge">50K Records</span>
+                  <span className="impact-badge">HIPAA Violation</span>
                 </div>
               </div>
             </div>
-            <div className="vp-timeline-item">
-              <div className="vp-timeline-year">2018</div>
-              <div className="vp-timeline-content">
-                <h4>Marriott International Breach</h4>
-                <p>Weak authentication controls in Starwood's reservation system allowed attackers to access 500 million guest records over four years.</p>
-                <div className="vp-breach-impact">
-                  <span className="vp-impact-badge">500M Guests</span>
-                  <span className="vp-impact-badge">$123M Fine</span>
+            <div className="timeline-item">
+              <div className="timeline-year">2020</div>
+              <div className="timeline-content">
+                <h4>E-commerce Platform</h4>
+                <p>Privilege escalation vulnerability allowed customers to apply admin discount codes by manipulating hidden form fields during checkout.</p>
+                <div className="breach-impact">
+                  <span className="impact-badge">$2.3M Loss</span>
+                  <span className="impact-badge">3 Months</span>
                 </div>
               </div>
             </div>
@@ -197,59 +183,59 @@ const AuthenticationFailures = () => {
         </div>
       </section>
 
-      {/* Prevention Section */}
-      <section className="vp-section vp-prevention">
-        <div className="vp-container">
-          <h2>Authentication Security Controls</h2>
-          <div className="vp-prevention-grid">
-            <div className="vp-prevention-category">
-              <h3>🔐 Strong Authentication</h3>
-              <div className="vp-strategy-list">
-                <div className="vp-strategy">
-                  <h4>Multi-Factor Authentication</h4>
-                  <p>Implement MFA for all users, especially for administrative and sensitive operations.</p>
+      {/* Prevention & Mitigation */}
+      <section className="bac-section bac-prevention">
+        <div className="bac-container">
+          <h2>Prevention & Mitigation Strategies</h2>
+          <div className="prevention-grid">
+            <div className="prevention-category">
+              <h3>🛡️ Defense in Depth</h3>
+              <div className="strategy-list">
+                <div className="strategy">
+                  <h4>Role-Based Access Control (RBAC)</h4>
+                  <p>Implement comprehensive RBAC systems that clearly define user roles and permissions.</p>
                 </div>
-                <div className="vp-strategy">
-                  <h4>Strong Password Policies</h4>
-                  <p>Enforce minimum password length, complexity, and regular rotation where appropriate.</p>
+                <div className="strategy">
+                  <h4>Attribute-Based Access Control (ABAC)</h4>
+                  <p>Use ABAC for fine-grained access control based on user attributes, environment, and resources.</p>
                 </div>
-                <div className="vp-strategy">
-                  <h4>Secure Password Storage</h4>
-                  <p>Use strong adaptive hashing algorithms like bcrypt or Argon2 with proper salts.</p>
-                </div>
-              </div>
-            </div>
-            <div className="vp-prevention-category">
-              <h3>🛡️ Attack Prevention</h3>
-              <div className="vp-strategy-list">
-                <div className="vp-strategy">
-                  <h4>Rate Limiting</h4>
-                  <p>Implement strict rate limiting on authentication endpoints to prevent brute force attacks.</p>
-                </div>
-                <div className="vp-strategy">
-                  <h4>Credential Stuffing Protection</h4>
-                  <p>Use breached password detection and block known compromised credentials.</p>
-                </div>
-                <div className="vp-strategy">
-                  <h4>Account Lockout</h4>
-                  <p>Implement temporary account lockouts after repeated failed authentication attempts.</p>
+                <div className="strategy">
+                  <h4>Server-Side Validation</h4>
+                  <p>Always validate permissions on the server-side. Never trust client-side checks alone.</p>
                 </div>
               </div>
             </div>
-            <div className="vp-prevention-category">
-              <h3>🔒 Session Management</h3>
-              <div className="vp-strategy-list">
-                <div className="vp-strategy">
-                  <h4>Secure Session Tokens</h4>
-                  <p>Use random, unpredictable session identifiers with proper expiration and invalidation.</p>
+            <div className="prevention-category">
+              <h3>🔍 Security Testing</h3>
+              <div className="strategy-list">
+                <div className="strategy">
+                  <h4>Automated Security Scans</h4>
+                  <p>Use DAST and SAST tools to automatically detect access control vulnerabilities.</p>
                 </div>
-                <div className="vp-strategy">
-                  <h4>Session Timeout</h4>
-                  <p>Implement automatic session expiration after periods of inactivity.</p>
+                <div className="strategy">
+                  <h4>Penetration Testing</h4>
+                  <p>Regular manual testing by security experts to identify complex access control issues.</p>
                 </div>
-                <div className="vp-strategy">
-                  <h4>Secure Logout</h4>
-                  <p>Properly invalidate server-side sessions on logout and client-side token removal.</p>
+                <div className="strategy">
+                  <h4>Code Review</h4>
+                  <p>Implement mandatory security code reviews for all authorization logic.</p>
+                </div>
+              </div>
+            </div>
+            <div className="prevention-category">
+              <h3>⚙️ Technical Controls</h3>
+              <div className="strategy-list">
+                <div className="strategy">
+                  <h4>Default Deny Principle</h4>
+                  <p>Deny all access by default and only allow explicitly permitted actions.</p>
+                </div>
+                <div className="strategy">
+                  <h4>API Security</h4>
+                  <p>Implement proper authentication and authorization for all API endpoints.</p>
+                </div>
+                <div className="strategy">
+                  <h4>Logging & Monitoring</h4>
+                  <p>Comprehensive logging of access control decisions and real-time monitoring.</p>
                 </div>
               </div>
             </div>
@@ -258,98 +244,75 @@ const AuthenticationFailures = () => {
       </section>
 
       {/* Code Examples */}
-      <section className="vp-section vp-code">
-        <div className="vp-container">
-          <h2>Secure Authentication Examples</h2>
-          <div className="vp-code-comparison">
-            <div className="vp-code-block vp-vulnerable">
-              <h4>❌ Vulnerable Authentication</h4>
-              <pre>{`// UNSAFE: No rate limiting
-app.post('/login', (req, res) => {
-  const user = User.findByCredentials(
-    req.body.username, 
-    req.body.password
-  );
-  if (user) {
-    req.session.userId = user.id; // Predictable ID
-  }
+      <section className="bac-section bac-code">
+        <div className="bac-container">
+          <h2>Secure Code Examples</h2>
+          <div className="code-comparison">
+            <div className="code-block vulnerable">
+              <h4>❌ Vulnerable Code</h4>
+              <pre>{`// UNSAFE: No access control check
+app.get('/api/users/:id', (req, res) => {
+  const user = getUserById(req.params.id);
+  res.json(user);
 });
 
-// UNSAFE: Weak password hashing
-const passwordHash = crypto
-  .createHash('md5')
-  .update(password)
-  .digest('hex');
-
-// UNSAFE: No session expiration
-app.use(session({
-  secret: 'weak-secret',
-  cookie: { maxAge: null } // Never expires
-}));
-
-// UNSAFE: Plain text passwords
-if (inputPassword === storedPassword) {
-  // Authentication successful
+// UNSAFE: Client-side control only
+function deleteUser(userId) {
+  if (currentUser.role === 'admin') {
+    // Client-side check can be bypassed
+    api.deleteUser(userId);
+  }
 }`}</pre>
             </div>
-            <div className="vp-code-block vp-secure">
-              <h4>✅ Secure Authentication</h4>
-              <pre>{`// SECURE: Rate limited authentication
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 5 // 5 attempts per window
+            <div className="code-block secure">
+              <h4>✅ Secure Code</h4>
+              <pre>{`// SAFE: Server-side access control
+app.get('/api/users/:id', (req, res) => {
+  if (req.user.id !== req.params.id && 
+      !req.user.roles.includes('admin')) {
+    return res.status(403).json({error: 'Forbidden'});
+  }
+  const user = getUserById(req.params.id);
+  res.json(user);
 });
-app.use('/login', limiter);
 
-// SECURE: Strong password hashing
-const passwordHash = await bcrypt.hash(password, 12);
-const isMatch = await bcrypt.compare(password, storedHash);
-
-// SECURE: Secure session management
-app.use(session({
-  secret: process.env.SESSION_SECRET,
-  cookie: { 
-    secure: true,
-    httpOnly: true,
-    maxAge: 30 * 60 * 1000 // 30 minutes
-  },
-  resave: false,
-  saveUninitialized: false
-}));
-
-// SECURE: Multi-factor authentication
-if (await verify2FACode(user, req.body.totpCode)) {
-  // Grant access
+// SAFE: Comprehensive server validation
+function deleteUser(userId) {
+  if (!hasPermission(req.user, 'delete_user', userId)) {
+    throw new Error('Insufficient permissions');
+  }
+  api.deleteUser(userId);
 }`}</pre>
             </div>
           </div>
         </div>
+        <button type="button" className="btn btn-outline-warning">Try it Yourself</button>
       </section>
 
       {/* Resources */}
-      <section className="vp-section vp-resources">
-        <div className="vp-container">
+      <section className="bac-section bac-resources">
+        <div className="bac-container">
           <h2>Additional Resources</h2>
-          <div className="vp-resources-grid">
-            <a href="https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/" className="vp-resource-card">
-              <div className="vp-resource-icon">📚</div>
-              <h3>OWASP Authentication Guide</h3>
-              <p>Complete guide to secure authentication implementation</p>
+          <div className="resources-grid">
+            <a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/" className="resource-card">
+              <div className="resource-icon">📚</div>
+              <h3>OWASP Official Documentation</h3>
+              <p>Complete technical details and mitigation strategies</p>
             </a>
-            <a href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html" className="vp-resource-card">
-              <div className="vp-resource-icon">🛡️</div>
-              <h3>Authentication Cheat Sheet</h3>
-              <p>Comprehensive authentication security practices</p>
+            <a href="https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html" className="resource-card">
+              <div className="resource-icon">🛡️</div>
+              <h3>Access Control Cheat Sheet</h3>
+              <p>Quick reference for secure implementation</p>
             </a>
-            <a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html" className="vp-resource-card">
-              <div className="vp-resource-icon">🔍</div>
-              <h3>Session Management Guide</h3>
-              <p>Secure session management best practices</p>
+            <a href="https://portswigger.net/web-security/access-control" className="resource-card">
+              <div className="resource-icon">🔍</div>
+              <h3>PortSwigger Academy</h3>
+              <p>Interactive labs and learning materials</p>
             </a>
-            <a href="https://cwe.mitre.org/data/definitions/287.html" className="vp-resource-card">
-              <div className="vp-resource-icon">📋</div>
-              <h3>CWE-287: Improper Authentication</h3>
-              <p>Common Weakness Enumeration for authentication issues</p>
+            <a href="https://cwe.mitre.org/data/definitions/639.html" className="resource-card">
+              <div className="resource-icon">📋</div>
+              <h3>CWE-639: Authorization Bypass</h3>
+              <p>Common Weakness Enumeration details</p>
             </a>
           </div>
         </div>
@@ -358,4 +321,4 @@ if (await verify2FACode(user, req.body.totpCode)) {
   );
 };
 
-export default AuthenticationFailures;
+export default BrokenAccessControl;

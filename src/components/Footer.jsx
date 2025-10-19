@@ -13,7 +13,7 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div className="footer-links">
-          <h3>Quick Links</h3>
+          <h4>Quick Links</h4>
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="https://owasp.org/Top10/" target="_blank" rel="noopener noreferrer">Study Material</a></li>
@@ -24,10 +24,9 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div className="footer-contact">
-          <h3>Contact</h3>
+          <h4>Contact</h4>
           <p>Email: support@example.com</p>
           <p>Phone: +91 98765 43210</p>
-          <p>Location: Bengaluru, India</p>
         </div>
 
         {/* Social Icons */}
