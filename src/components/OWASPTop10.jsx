@@ -7,73 +7,80 @@ const OWASPTop10 = () => {
       id: 1,
       name: "Broken Access Control",
       description: "Restrictions on what authenticated users are allowed to do are not properly enforced, allowing attackers to access unauthorized functionality or data.",
-      link: "./broken-access-control",
+      link: "/broken-access-control",
       image: "./brokenaccesscontrol.png",
     },
     {
       id: 2,
       name: "Cryptographic Failures",
       description: "Failures related to cryptography which often lead to exposure of sensitive data like passwords, credit cards, and health records.",
-      link: "./cryptographic-failures",
-      image: "/cryptography.png", 
+      link: "/cryptographic-failures",
+      image: "/cryptography.png",
     },
     {
       id: 3,
       name: "Injection",
       description: "Untrusted data is sent to an interpreter as part of a command or query, leading to data loss, corruption, or unauthorized access.",
-      link: "./injection",
+      link: "/injection",
       image: "/injuction.png",
     },
     {
       id: 4,
       name: "Insecure Design",
       description: "Missing or ineffective control design that fails to prevent security flaws before implementation.",
-      link: "./insecure-design",
+      link: "/insecure-design",
       image: "/insecuredesign.png",
     },
     {
       id: 5,
       name: "Security Misconfiguration",
       description: "Insecure configurations in any part of the application stack, from network services to platform settings.",
-      link: "./security-misconfiguration",
-      image: "/securitymissconfiguration.png", 
+      link: "/security-misconfiguration",
+      image: "/securitymissconfiguration.png",
     },
     {
       id: 6,
       name: "Vulnerable Components",
       description: "Using components with known vulnerabilities that can be exploited to compromise applications.",
-      link: "./vulnerable-components",
+      link: "/vulnerable-components",
       image: "./vulnerablecomponent.png",
     },
     {
       id: 7,
       name: "Authentication Failures",
       description: "Broken authentication mechanisms that allow credential stuffing, brute force, and session hijacking attacks.",
-      link: "./authentication-failures",
+      link: "/authentication-failures",
       image: "./authunticationfailures.png",
     },
     {
       id: 8,
       name: "Software & Data Integrity",
       description: "Failures related to software updates, critical data, and CI/CD pipelines without integrity verification.",
-      link: "./software-data-integrity",
+      link: "/software-data-integrity",
       image: "./softwaredataintegrity.png"
     },
     {
       id: 9,
       name: "Security Logging Failures",
       description: "Failures in logging, monitoring, and incident response capabilities that prevent threat detection.",
-      link: "./security-logging-failures",
+      link: "/security-logging-failures",
       image: "./securityloggingfailure.png",
     },
     {
       id: 10,
       name: "Server-Side Request Forgery",
       description: "Web applications that fetch remote resources without validating user-supplied URLs.",
-      link: "./server-side-request-forgery",
-      image: "/serversideforgery.png", 
+      link: "/server-side-request-forgery",
+      image: "/serversideforgery.png",
     }
   ];
+
+  const handleLearnMoreClick = (e, link) => {
+    e.preventDefault();
+    
+    // Navigate to the actual page
+    window.location.href = link;
+  };
 
   const VulnerabilityCard = ({ vulnerability }) => {
     return (
@@ -105,9 +112,8 @@ const OWASPTop10 = () => {
 
           <a
             href={vulnerability.link}
-            target="_blank"
-            rel="noopener noreferrer"
             className={styles.cardLink}
+            onClick={(e) => handleLearnMoreClick(e, vulnerability.link)}
           >
             Learn More
             <svg className={styles.linkIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
