@@ -1,4 +1,4 @@
-🚀 Demo 👉 Live Site on Netlify: https://xplotisim.netlify.app/insecure-design
+🚀 Demo 👉 Live Site on Netlify: https://xplotisim.netlify.app/
 
 Getting Started with Create React App
 
