@@ -17,6 +17,8 @@ import AuthenticationFailures from './components/AuthenticationFailures';
 import SoftwareDataIntegrity from './components/SoftwareDataIntegrity';
 import SecurityLoggingFailures from './components/SecurityLoggingFailures';
 import ServerSideRequestForgery from './components/ServerSideRequestForgery';
+import AuthenticationSandbox from './components/AuthenticationSandbox';
+
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -82,6 +84,7 @@ function App() {
             <Route path="/software-data-integrity" element={<SoftwareDataIntegrity />} />
             <Route path="/security-logging-failures" element={<SecurityLoggingFailures />} />
             <Route path="/server-side-request-forgery" element={<ServerSideRequestForgery />} />
+            <Route path="/sandbox/authentication-failures" element={<AuthenticationSandbox />} />
           </Routes>
         </main>
         <Footer />
