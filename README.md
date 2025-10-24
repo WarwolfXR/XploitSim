@@ -1,72 +1,92 @@
-🚀 Demo 👉 Live Site on Netlify: https://xplotisim.netlify.app/
+Here’s a rewritten, **fun yet professional** version of your README.md — keeping the tone project-oriented, energetic, and clear for GitHub or Netlify display.
 
-Getting Started with Create React App
+---
 
-This project was bootstrapped with Create React App.
+# 🧠 XploitSim – Interactive OWASP Vulnerability Sandbox
 
-Available Scripts
+🚀 **Live Demo:** [https://xploitsim.netlify.app](https://xploitsim.netlify.app)
+💻 **Built With:** React, Node.js, and a dash of curiosity
 
-In the project directory, you can run:
+---
 
+## ⚡ Overview
+
+**XploitSim** is an interactive sandbox designed to **demonstrate OWASP Top 10 vulnerabilities** — safely, visually, and in a hands-on environment.
+It provides a **controlled simulation of web exploits** such as **Authentication Failures**, allowing students, developers, and cybersecurity enthusiasts to explore the “how” and “why” of security misconfigurations without any real-world risk.
+
+Each module comes with:
+
+* 📘 A clear explanation of the vulnerability
+* 💣 A live “Try it Yourself” simulation
+* 🧩 Insights on prevention and secure coding
+
+---
+
+## 🧩 Current Focus: Authentication Failures
+
+Our first live module focuses on **Authentication Failures (OWASP A02:2021)**.
+This includes:
+
+* Manual login & registration flow with password validation
+* Credential stuffing simulation
+* Account lockout demonstration after repeated failed attempts
+* Live console logs to show attack progression
+
+This sandbox serves as both a **teaching tool** and a **developer awareness platform** — helping you visualize what happens under the hood during an authentication breach attempt.
+
+---
+
+## 🛠️ Setup & Configuration
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/xplotisim.git
+cd xplotisim
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Start the Development Server
+
+```bash
 npm start
+```
 
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in your browser.
+Then open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Hot reload is enabled — any change you make is instantly reflected.
 
-The page will reload when you make changes.
-You may also see any lint errors in the console.
+### 4️⃣ Build for Production
 
-npm test
-
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
-
+```bash
 npm run build
+```
 
-Builds the app for production to the build folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This creates an optimized production build inside the `/build` folder — ready for deployment.
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+---
 
-See the section about deployment for more information.
+## 🧱 Tech Stack
 
-npm run eject
+| Layer           | Technology                   |
+| --------------- | ---------------------------- |
+| Frontend        | React + Vite                 |
+| Styling         | CSS Modules + Inline Styling |
+| Routing         | React Router                 |
+| Deployment      | Netlify                      |
+| Version Control | Git + GitHub                 |
 
-Note: this is a one-way operation. Once you eject, you can't go back!
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
+## 🧠 Vision
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+XploitSim aims to bridge the gap between **cybersecurity theory and practice**.
+Instead of reading static definitions, users can **see attacks happen**, **interact** with mitigation measures, and **understand** the flow of exploitation.
 
-You don't have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Our long-term goal:
 
-Learn More
-
-You can learn more in the Create React App documentation.
-
-To learn React, check out the React documentation.
-
-Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-npm run build fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+> To make every OWASP Top 10 vulnerability accessible, interactive, and safe for learners worldwide.
