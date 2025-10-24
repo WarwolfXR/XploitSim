@@ -1,7 +1,3 @@
-Here’s a rewritten, **fun yet professional** version of your README.md — keeping the tone project-oriented, energetic, and clear for GitHub or Netlify display.
-
----
-
 # 🧠 XploitSim – Interactive OWASP Vulnerability Sandbox
 
 🚀 **Live Demo:** [https://xploitsim.netlify.app](https://xploitsim.netlify.app)
