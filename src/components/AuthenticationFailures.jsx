@@ -12,7 +12,8 @@ const AuthenticationFailures = () => {
             <div className="bac-badge">A02:2021</div>
             <h1 className="bac-title">Authentication Failures</h1>
             <p className="bac-subtitle">
-              Authentication failures occur when functions related to authentication are implemented incorrectly, allowing attackers to compromise passwords, keys, or session tokens.
+              Authentication failures occur when functions related to authentication are implemented incorrectly,
+              allowing attackers to compromise passwords, keys, or session tokens.
             </p>
             <div className="bac-stats">
               <div className="stat">
@@ -23,9 +24,22 @@ const AuthenticationFailures = () => {
                 <span className="stat-number">High</span>
                 <span className="stat-label">Impact</span>
               </div>
+              <div className="stat">
+                <span className="stat-number">Critical</span>
+                <span className="stat-label">Severity</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Added Hero Visual from code 1 */}
+          <div className="bac-hero-visual">
+            <div className="security-shield">
+              <div className="shield-icon">🔐</div>
+              <div className="shield-text">Authentication</div>
             </div>
           </div>
         </div>
+
         <div className="bac-scroll-indicator">
           <span>Scroll to explore</span>
           <div className="scroll-arrow"></div>
@@ -37,8 +51,9 @@ const AuthenticationFailures = () => {
         <div className="bac-container">
           <h2>What Are Authentication Failures?</h2>
           <p>
-            Authentication failures arise when an application does not properly protect authentication credentials or session tokens.
-            Common issues include weak passwords, missing multi-factor authentication, and improper session management.
+            Authentication failures arise when an application does not properly protect authentication credentials or
+            session tokens. Common issues include weak passwords, missing multi-factor authentication, and improper
+            session management.
           </p>
         </div>
       </section>
@@ -64,9 +79,25 @@ if (!/(?=.*[A-Z])(?=.*[0-9])/.test(password)) {
             </div>
           </div>
 
-          {/* ✅ Correct Try it Yourself Button Placement */}
-          <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
-            <Link to="/sandbox/authentication-failures" className="btn btn-outline-warning">
+          {/* Centered Try it Yourself Button */}
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: '100%',
+              margin: '1.5rem auto 0 auto',
+              textAlign: 'center',
+            }}
+          >
+            <Link
+              to="/sandbox/authentication-failures"
+              className="btn btn-outline-warning"
+              style={{
+                display: 'inline-block',
+                margin: '0 auto',
+              }}
+            >
               Try it Yourself
             </Link>
           </div>
@@ -86,10 +117,7 @@ if (!/(?=.*[A-Z])(?=.*[0-9])/.test(password)) {
               <h3>OWASP Documentation</h3>
               <p>Official OWASP guide for Authentication Failures</p>
             </a>
-            <a
-              href="https://portswigger.net/web-security/authentication"
-              className="resource-card"
-            >
+            <a href="https://portswigger.net/web-security/authentication" className="resource-card">
               <div className="resource-icon">🔍</div>
               <h3>PortSwigger Academy</h3>
               <p>Hands-on labs for authentication vulnerabilities</p>
