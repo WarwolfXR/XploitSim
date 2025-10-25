@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../index.css';
 import './VulnerabilityPage.css';
-import './BrokenAccessControl.css'; // reuse bac-hero styles
+import './BrokenAccessControl.css'; 
+import './AuthenticationSandbox.css';
+// reuse bac-hero styles
 
 const LOCAL_USERS_KEY = 'xploitsim_users_v1';
 const LOCAL_LOG_KEY = 'xploitsim_attacklog_v1';
