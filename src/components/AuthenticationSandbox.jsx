@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../index.css';
 import './VulnerabilityPage.css';
-import './BrokenAccessControl.css'; // reuse bac-hero styles
+import './BrokenAccessControl.css'; 
+import './AuthenticationSandbox.css';
+// reuse bac-hero styles
 
 const LOCAL_USERS_KEY = 'xploitsim_users_v1';
 const LOCAL_LOG_KEY = 'xploitsim_attacklog_v1';
@@ -43,10 +45,14 @@ export default function AuthenticationSandbox() {
   const consoleRef = useRef(null);
 
   // Replay controls (kept if used later)
-  //const [replayIndex, setReplayIndex] = useState(0);
-  //const [isReplaying, setIsReplaying] = useState(false);
-  //const replayTimerRef = useRef(null);
-  //const REPLAY_INTERVAL_MS = 700;
+  // eslint-disable-next-line no-unused-vars
+  const [replayIndex, setReplayIndex] = useState(0);
+  // eslint-disable-next-line no-unused-vars
+  const [isReplaying, setIsReplaying] = useState(false);
+  // eslint-disable-next-line no-unused-vars
+  const replayTimerRef = useRef(null);
+  // eslint-disable-next-line no-unused-vars
+  const REPLAY_INTERVAL_MS = 700;
 
   // Persist users and logs
   useEffect(() => {
